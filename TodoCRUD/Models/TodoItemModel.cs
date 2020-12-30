@@ -1,3 +1,5 @@
+using System;
+
 namespace TodoCRUD.Models
 {
     public class TodoItemModel
@@ -7,6 +9,6 @@ namespace TodoCRUD.Models
         public string Desc { get; set; }
         public DateTime TimeStamp { get; set; }
         public bool isComplete { get; set; }
-        public Guid TodoListId { get; set; }
+        public Guid ListId { get; set; }
     }
 }
