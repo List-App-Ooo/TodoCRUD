@@ -38,3 +38,4 @@ C:\Users\Admin\Workspace\ListApp\TodoCRUD\TodoCRUD\obj\Debug\net5.0\TodoCRUD.dll
 C:\Users\Admin\Workspace\ListApp\TodoCRUD\TodoCRUD\obj\Debug\net5.0\ref\TodoCRUD.dll
 C:\Users\Admin\Workspace\ListApp\TodoCRUD\TodoCRUD\obj\Debug\net5.0\TodoCRUD.pdb
 C:\Users\Admin\Workspace\ListApp\TodoCRUD\TodoCRUD\obj\Debug\net5.0\TodoCRUD.genruntimeconfig.cache
+C:\Users\Admin\Workspace\ListApp\TodoCRUD\TodoCRUD\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll

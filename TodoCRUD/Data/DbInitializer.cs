@@ -17,13 +17,16 @@ namespace TodoCRUD.Data
             }
 
             var todo = new List<TodoItemModel>();
+            Guid guid = new Guid();
+
             todo.Add(
                 new TodoItemModel() 
                 {
                     Title = "Wash the car",
                     Desc = "Be sure to have the interior vacuumed and the exterior waxed.",
                     TimeStamp = DateTime.Now,
-                    isComplete = false
+                    IsComplete = false,
+                    ListId = guid
                 }
             );
             todo.Add(
@@ -32,7 +35,8 @@ namespace TodoCRUD.Data
                     Title = "Get groceries",
                     Desc = "Don't forget your fruits and veggies.",
                     TimeStamp = DateTime.Now,
-                    isComplete = false
+                    IsComplete = false,
+                    ListId = guid
                 }
             );
             todo.Add(
@@ -41,7 +45,8 @@ namespace TodoCRUD.Data
                     Title = "Take out the trash",
                     Desc = "Get the trash out of the guest bathroom too.",
                     TimeStamp = DateTime.Now,
-                    isComplete = false
+                    IsComplete = false,
+                    ListId = guid
                 }
             );
 
