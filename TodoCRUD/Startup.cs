@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using TodoCRUD.Data;
+using TodoCRUD.Services;
 
 namespace TodoCRUD
 {
@@ -32,6 +33,7 @@ namespace TodoCRUD
             services.AddControllers();
             services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("dbTodoInMemory"));
             services.AddScoped<ITodoRepo, TodoRepo>();
+            services.AddScoped<ITodoService, TodoService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoCRUD", Version = "v1" });
