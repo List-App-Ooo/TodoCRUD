@@ -16,10 +16,10 @@ namespace TodoCRUD.Data
                 return;
             }
 
-            var todo = new List<TodoItemModel>();
+            var todos = new List<TodoItemModel>();
             Guid guid = new Guid();
 
-            todo.Add(
+            todos.Add(
                 new TodoItemModel() 
                 {
                     Title = "Wash the car",
@@ -29,7 +29,7 @@ namespace TodoCRUD.Data
                     ListId = guid
                 }
             );
-            todo.Add(
+            todos.Add(
                 new TodoItemModel() 
                 {
                     Title = "Get groceries",
@@ -39,7 +39,7 @@ namespace TodoCRUD.Data
                     ListId = guid
                 }
             );
-            todo.Add(
+            todos.Add(
                 new TodoItemModel() 
                 {
                     Title = "Take out the trash",
@@ -50,7 +50,7 @@ namespace TodoCRUD.Data
                 }
             );
 
-            context.Todos.AddRange(todo);
+            context.Todos.AddRange(todos);
             context.SaveChanges();
         }
     }

@@ -18,8 +18,6 @@ namespace TodoCRUD.Services
         public async Task<List<TodoItemModel>> GetTodos(Guid listId)
         {
             return await _todoRepo.GetTodoItems(listId);
-            
-            // throw new NotImplementedException();
         }
 
         public async Task<int> GetTodoTotal(Guid listId)

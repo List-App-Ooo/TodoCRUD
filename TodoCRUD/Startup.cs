@@ -34,6 +34,11 @@ namespace TodoCRUD
             services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("dbTodoInMemory"));
             services.AddScoped<ITodoRepo, TodoRepo>();
             services.AddScoped<ITodoService, TodoService>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowOrigin",
+                    builder => builder.AllowAnyOrigin());
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoCRUD", Version = "v1" });
@@ -55,6 +60,8 @@ namespace TodoCRUD
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("AllowOrigin");
 
             app.UseEndpoints(endpoints =>
             {
