@@ -15,7 +15,7 @@ namespace TodoCRUD.Services
             this._todoRepo = todoRepo;
         }
 
-        public async Task<List<TodoItemModel>> GetTodos(Guid listId)
+        public async Task<List<TodoModel>> GetTodos(Guid listId)
         {
             return await _todoRepo.GetTodoItems(listId);
         }

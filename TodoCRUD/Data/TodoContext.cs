@@ -7,7 +7,7 @@ namespace TodoCRUD.Data
     {
         public TodoContext(DbContextOptions<TodoContext> options) : base(options) {}
 
-        public DbSet<TodoItemModel> Todos { get; set; }
+        public DbSet<TodoModel> Todos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

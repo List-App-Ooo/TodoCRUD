@@ -7,7 +7,7 @@ namespace TodoCRUD.Data
 {
     public interface ITodoRepo
     {
-        Task<List<TodoItemModel>> GetTodoItems(Guid listId);
+        Task<List<TodoModel>> GetTodoItems(Guid listId);
         Task<int> GetTotal(Guid postId);
     }
 }

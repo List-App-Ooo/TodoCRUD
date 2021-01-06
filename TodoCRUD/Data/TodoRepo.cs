@@ -15,10 +15,10 @@ namespace TodoCRUD.Data
         {
             this._context = context;
         }
-        public async Task<List<TodoItemModel>> GetTodoItems(Guid listId)
+        public async Task<List<TodoModel>> GetTodoItems(Guid listId)
         {
             var query = _context.Todos.Where(m => m.ListId == listId).OrderBy(d => d.TimeStamp);
-            return await query.ToListAsync<TodoItemModel>();
+            return await query.ToListAsync<TodoModel>();
         }
 
         public async Task<int> GetTotal(Guid listId)
