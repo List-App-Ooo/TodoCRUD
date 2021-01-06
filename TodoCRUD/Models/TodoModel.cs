@@ -2,7 +2,7 @@ using System;
 
 namespace TodoCRUD.Models
 {
-    public class TodoItemModel
+    public class TodoModel
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
