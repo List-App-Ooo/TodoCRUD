@@ -17,7 +17,7 @@ namespace TodoCRUD.Data
             }
 
             var todos = new List<TodoModel>();
-            Guid guid = new Guid();
+            Guid guid = new Guid("ef6a7925-80a6-44bc-9e03-89bc7ca3586f");
 
             todos.Add(
                 new TodoModel() 

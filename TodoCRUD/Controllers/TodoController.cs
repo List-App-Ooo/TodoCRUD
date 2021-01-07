@@ -8,7 +8,7 @@ using TodoCRUD.Services;
 namespace TodoCRUD.Controllers
 {
     [ApiController]
-    [Route("api/todos")]
+    [Route("api/[controller]")]
     public class TodoController : ControllerBase
     {
         private readonly ITodoService _todoService;
