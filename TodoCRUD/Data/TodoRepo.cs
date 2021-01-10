@@ -15,6 +15,11 @@ namespace TodoCRUD.Data
         {
             this._context = context;
         }
+        public async Task<TodoModel> GetTodoItem(Guid id)
+        {
+            var query = _context.Todos.FirstOrDefaultAsync(m => m.Id == id);
+            return await query;
+        }
         public async Task<List<TodoModel>> GetTodoItems(Guid listId)
         {
             var query = _context.Todos.Where(m => m.ListId == listId).OrderBy(d => d.TimeStamp);

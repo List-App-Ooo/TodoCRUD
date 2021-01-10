@@ -7,6 +7,7 @@ namespace TodoCRUD.Services
 {
     public interface ITodoService
     {
+        Task<TodoModel> GetTodo(Guid id);
         Task<List<TodoModel>> GetTodos(Guid listId);
         Task<int> GetTodoTotal(Guid listId);
     }

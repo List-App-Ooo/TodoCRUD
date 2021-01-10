@@ -18,7 +18,14 @@ namespace TodoCRUD.Controllers
             this._todoService = todoService;
         }
 
-        [HttpGet("{listId}")]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetTodo(Guid id)
+        {
+            var result = await _todoService.GetTodo(id);
+            return Ok(result);
+        }
+
+        [HttpGet("list/{listId}")]
         public async Task<IActionResult> GetTodos(Guid listId)
         {
             var result = await _todoService.GetTodos(listId);
