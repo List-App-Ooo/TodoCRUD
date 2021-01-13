@@ -22,7 +22,7 @@ namespace TodoCRUD.Services
         {
             return await _todoRepo.GetTodos(listId);
         }
-        public async Task<int> GetTodoTotal(Guid listId)
+        public async Task<int> GetTotal(Guid listId)
         {
             return await _todoRepo.GetTotal(listId);
         }

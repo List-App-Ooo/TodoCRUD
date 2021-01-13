@@ -30,6 +30,12 @@ namespace TodoCRUD.Controllers
             var result = await _todoService.GetTodos(listId);
             return Ok(result);
         }
+        [HttpGet("total/{listId}")]
+        public async Task<IActionResult> GetTotal(Guid listId)
+        {
+            var result = await _todoService.GetTotal(listId);
+            return Ok(result);
+        }
         [HttpPost]
         public async Task<IActionResult> CreateTodo(TodoModel todo)
         {

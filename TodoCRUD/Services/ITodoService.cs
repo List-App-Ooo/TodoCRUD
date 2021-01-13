@@ -9,7 +9,7 @@ namespace TodoCRUD.Services
     {
         Task<TodoModel> GetTodo(Guid id);
         Task<List<TodoModel>> GetTodos(Guid listId);
-        Task<int> GetTodoTotal(Guid listId);
+        Task<int> GetTotal(Guid listId);
         Task<TodoModel> CreateTodo(TodoModel todo);
         void DeleteTodo(Guid id);
     }
